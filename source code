@@ -1,0 +1,91 @@
+import time
+
+def introduction():
+    print("Welcome to the Adventure Game!")
+    time.sleep(1)
+    print("You find yourself in a mysterious forest.")
+    time.sleep(1)
+    print("You have two paths ahead: a dark cave or a sunny meadow.")
+    time.sleep(1)
+
+def choose_path():
+    print("Which path will you choose?")
+    time.sleep(1)
+    print("1. Dark cave")
+    time.sleep(1)
+    print("2. Sunny meadow")
+
+    choice = input("Enter the number of your choice: ")
+
+    if choice == "1":
+        dark_cave()
+    elif choice == "2":
+        sunny_meadow()
+    else:
+        print("Invalid choice. Try again.")
+        choose_path()
+
+def dark_cave():
+    print("You enter the dark cave.")
+    time.sleep(1)
+    print("It's pitch black, and you can't see anything.")
+    time.sleep(1)
+    print("Do you:")
+    time.sleep(1)
+    print("1. Light a torch")
+    time.sleep(1)
+    print("2. Feel your way through the darkness")
+
+    choice = input("Enter the number of your choice: ")
+
+    if choice == "1":
+        print("You light a torch and see a hidden passage.")
+        time.sleep(1)
+        print("You follow the passage and find treasure!")
+    elif choice == "2":
+        print("You stumble and fall into a pit. Game over.")
+    else:
+        print("Invalid choice. Game over.")
+
+def sunny_meadow():
+    print("You walk into the sunny meadow.")
+    time.sleep(1)
+    print("You see a friendly creature.")
+    time.sleep(1)
+    print("Do you:")
+    time.sleep(1)
+    print("1. Approach the creature")
+    time.sleep(1)
+    print("2. Ignore the creature and explore further")
+
+    choice = input("Enter the number of your choice: ")
+
+    if choice == "1":
+        print("The creature guides you to a magical portal.")
+        time.sleep(1)
+        print("You step through the portal and find yourself back home. You win!")
+    elif choice == "2":
+        print("You get lost in the meadow.")
+        time.sleep(1)
+        print("Suddenly, a hidden door appears in the meadow.")
+        time.sleep(1)
+        print("Do you:")
+        time.sleep(1)
+        print("1. Open the door")
+        time.sleep(1)
+        print("2. Continue wandering")
+
+        next_choice = input("Enter the number of your choice: ")
+
+        if next_choice == "1":
+            print("You open the door and discover a treasure room. You win!")
+        elif next_choice == "2":
+            print("You continue wandering and encounter a dangerous creature. Game over.")
+        else:
+            print("Invalid choice. Game over.")
+    else:
+        print("Invalid choice. Game over.")
+
+if __name__ == "__main__":
+    introduction()
+    choose_path()
